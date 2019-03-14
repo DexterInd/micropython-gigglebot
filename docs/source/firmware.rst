@@ -32,10 +32,7 @@ Firmware
 This customized firmware that includes the modules listed in this documentation also includes a handful of features meant to make use
 of the available RAM on the BBC micro:bit in a more efficient manner. 
 
-The vanilla firmware that comes with the `Mu Editor`_ is not really a good choice to use with external libraries because you cannot load precompiled
-modules and then just import them. And loading most of the bigger libraries on the microbit doesn't work either, because the board has such limited RAM resources.
-
-So we have come up with a custom firmware that allows the import of precompiled python modules (to byte-code aka ``.mpy`` files). These ``.mpy`` modules can be treated
+The default micrpython runtime that comes with the Mu Editor fills the needs of a single microbit but does not offer enough power to easily drive extra hardware like the GiggleBot. So we have come up with a custom firmware that allows the import of precompiled python modules (to byte-code aka ``.mpy`` files). These ``.mpy`` modules can be treated
 like regular ``.py`` modules and copied in exactly the same manner over your microbit's filesystem, but they cannot be opened and edited in any way; it's not like it's necessary anyway.
 This has the advantage of skipping the precompiling phase on the microbit that could leave it without RAM resources during or after this process. 
 
